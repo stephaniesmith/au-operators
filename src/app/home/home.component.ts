@@ -29,16 +29,6 @@ export class HomeComponent implements OnInit {
         this.advancedCourses$ = courses$.pipe(
             map(courses => courses.filter(({ category }) => category === 'ADVANCED'))
         );
-
-        // courses$.subscribe(
-        //   courses => {
-        //     this.beginnerCourses = courses.filter(({ category }) => category === 'BEGINNER');
-        //     this.advancedCourses = courses.filter(({ category }) => category === 'ADVANCED');
-        //   },
-        //   noop,
-        //   () => console.log('completed')
-        // );
-
     }
 
 }
